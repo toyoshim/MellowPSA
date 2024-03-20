@@ -1,0 +1,107 @@
+
+(rules PCB MellowPSA
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 32538)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 6.5)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.2)
+    )
+  )
+  (rule
+    (width 250.0)
+    (clear 200.2)
+    (clear 125.0 (type smd_to_turn_gap))
+    (clear 50.0 (type smd_smd))
+  )
+  (padstack "Via[0-1]_800:400_um"
+    (shape
+      (circle F.Cu 800.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 800.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_800:400_um" "Via[0-1]_800:400_um" default
+  )
+  (via 
+    "Via[0-1]_800:400_um-kicad_default" "Via[0-1]_800:400_um" "kicad_default"
+  )
+  (via 
+    "Via[0-1]_800:400_um-Power" "Via[0-1]_800:400_um" Power
+  )
+  (via_rule
+    default "Via[0-1]_800:400_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_800:400_um-kicad_default"
+  )
+  (via_rule
+    Power "Via[0-1]_800:400_um-Power"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    /PON "Net-(C2-Pad1)" "Net-(C2-Pad2)" "Net-(C3-Pad1)" "Net-(C3-Pad2)" "Net-(C4-Pad1)" "Net-(C4-Pad2)" "Net-(C5-Pad1)"
+    "Net-(C5-Pad2)" "Net-(U5-+)" "Net-(C6-Pad2)" "Net-(C7-Pad1)" /OUT+ "Net-(C8-Pad2)" "/V_CPLD" "Net-(D2-K)"
+    /LED1 "Net-(D3-A)" /LED0 "Net-(D4-A)" /A11 /A12 /A13 /A14
+    /A15 /{slash}CLK /D4 /D3 /D5 /D6 /D2 /D7
+    /D0 /D1 /{slash}INT /{slash}NMI /{slash}HALT /{slash}MREQ /{slash}IORQ "/{slash}RD_MB"
+    /{slash}WR /{slash}BUSACK /{slash}WAIT /{slash}BUSRQ /{slash}RESET /{slash}M1 /{slash}RFSH /A0
+    /A1 /A2 /A3 /A4 /A5 /A6 /A7 /A8
+    /A9 /A10 /FA7 /FA6 /FA5 /FA4 /FA3 /FA2
+    /FA1 /FA0 /CD0 /CD1 /CD2 /CD3 /CD4 /CD5
+    /CD6 /CD7 /CCS2 /FA10 /CCS1 /CCS3 /FA9 /FA8
+    /TCK /TDO /TMS "unconnected-(J3-Pin_6-Pad6)" "unconnected-(J3-Pin_7-Pad7)" "unconnected-(J3-Pin_8-Pad8)" /TDI "/IN-"
+    /IN+ /DIPSW0 /DIPSW1 /DIPSW2 /DIPSW3 "Net-(R9-Pad2)" "Net-(R10-Pad2)" /TO0
+    /TO1 /TO2 /{slash}RD /CA7 /CA6 /CA5 /CA4 /CA3
+    /CA2 /CA1 /CA0 /CA10 /{slash}ROMCS /CA9 /CA8 /TG0
+    /TG1 /TG2 /{slash}TCS /{slash}RAMWR /{slash}RAMCS "unconnected-(U5-GAIN-Pad1)" "unconnected-(U5-BYPASS-Pad7)" "unconnected-(U5-GAIN-Pad8)"
+    (clearance_class "kicad_default")
+    (via_rule kicad_default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class Power
+    GND VCC
+    (clearance_class Power)
+    (via_rule Power)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)
