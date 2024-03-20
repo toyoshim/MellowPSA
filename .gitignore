@@ -2,3 +2,7 @@
 .DS_Store
 fp-info-cache
 production
+db
+incremental_db
+output_files
+*.qws

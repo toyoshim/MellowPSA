@@ -1,0 +1,128 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+# Date created = 16:05:52  2月 03, 2024
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		PSA_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY MAX7000S
+set_global_assignment -name DEVICE "EPM7128STC100-10"
+set_global_assignment -name TOP_LEVEL_ENTITY PSA
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "16:05:52  2月 03, 2024"
+set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name DEVICE_FILTER_PACKAGE TQFP
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 100
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 10
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR "-1"
+set_global_assignment -name EDA_DESIGN_ENTRY_SYNTHESIS_TOOL "Design Compiler"
+set_global_assignment -name EDA_INPUT_VCC_NAME VDD -section_id eda_design_synthesis
+set_global_assignment -name EDA_LMF_FILE altsyn.lmf -section_id eda_design_synthesis
+set_global_assignment -name EDA_INPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_design_synthesis
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name MAX7000_DEVICE_IO_STANDARD TTL
+set_location_assignment PIN_10 -to i_ZA[7]
+set_location_assignment PIN_21 -to i_ZD[1]
+set_location_assignment PIN_20 -to i_ZD[0]
+set_location_assignment PIN_17 -to i_ZD[2]
+set_location_assignment PIN_13 -to i_ZD[3]
+set_location_assignment PIN_12 -to i_ZD[4]
+set_location_assignment PIN_14 -to i_ZD[5]
+set_location_assignment PIN_16 -to i_ZD[6]
+set_location_assignment PIN_19 -to i_ZD[7]
+set_location_assignment PIN_1 -to i_ZA[0]
+set_location_assignment PIN_2 -to i_ZA[1]
+set_location_assignment PIN_5 -to i_ZA[2]
+set_location_assignment PIN_6 -to i_ZA[3]
+set_location_assignment PIN_7 -to i_ZA[4]
+set_location_assignment PIN_8 -to i_ZA[5]
+set_location_assignment PIN_9 -to i_ZA[6]
+set_location_assignment PIN_89 -to i_nRST
+set_location_assignment PIN_99 -to i_nWR
+set_location_assignment PIN_98 -to i_nRD
+set_location_assignment PIN_97 -to o_nSYSTEM_RD
+set_location_assignment PIN_96 -to i_nIORQ
+set_location_assignment PIN_94 -to o_CD[3]
+set_location_assignment PIN_93 -to o_CD[4]
+set_location_assignment PIN_92 -to o_CD[5]
+set_location_assignment PIN_85 -to o_CD[6]
+set_location_assignment PIN_84 -to o_CD[7]
+set_location_assignment PIN_83 -to i_FA[10]
+set_location_assignment PIN_81 -to i_FA[9]
+set_location_assignment PIN_80 -to i_FA[8]
+set_location_assignment PIN_79 -to i_FA[7]
+set_location_assignment PIN_78 -to i_FA[6]
+set_location_assignment PIN_77 -to i_FA[5]
+set_location_assignment PIN_76 -to i_FA[4]
+set_location_assignment PIN_75 -to i_FA[3]
+set_location_assignment PIN_72 -to i_FA[2]
+set_location_assignment PIN_71 -to i_FA[1]
+set_location_assignment PIN_70 -to i_FA[0]
+set_location_assignment PIN_87 -to i_CLK
+set_location_assignment PIN_100 -to i_PON
+set_location_assignment PIN_69 -to o_CA[10]
+set_location_assignment PIN_68 -to o_CA[9]
+set_location_assignment PIN_67 -to o_CA[8]
+set_location_assignment PIN_65 -to o_CA[7]
+set_location_assignment PIN_64 -to o_CA[6]
+set_location_assignment PIN_63 -to o_CA[5]
+set_location_assignment PIN_61 -to o_CA[4]
+set_location_assignment PIN_60 -to o_CA[3]
+set_location_assignment PIN_58 -to o_CA[2]
+set_location_assignment PIN_57 -to o_CA[1]
+set_location_assignment PIN_56 -to o_CA[0]
+set_location_assignment PIN_22 -to o_CD[0]
+set_location_assignment PIN_23 -to o_CD[1]
+set_location_assignment PIN_24 -to o_CD[2]
+set_location_assignment PIN_25 -to o_TIMER_GATE[2]
+set_location_assignment PIN_27 -to o_TIMER_GATE[1]
+set_location_assignment PIN_28 -to o_TIMER_GATE[0]
+set_location_assignment PIN_55 -to o_nRAM_CS
+set_location_assignment PIN_54 -to o_nRAM_WR
+set_location_assignment PIN_53 -to o_nROM_CS
+set_location_assignment PIN_29 -to o_nTIMER_CS
+set_location_assignment PIN_30 -to o_nLED[1]
+set_location_assignment PIN_31 -to o_nLED[0]
+set_location_assignment PIN_32 -to i_DIPSW[3]
+set_location_assignment PIN_33 -to i_DIPSW[2]
+set_location_assignment PIN_35 -to i_DIPSW[1]
+set_location_assignment PIN_36 -to i_DIPSW[0]
+set_global_assignment -name USE_CONFIGURATION_DEVICE ON
+set_global_assignment -name VERILOG_FILE PSA.v
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name OPTIMIZE_HOLD_TIMING OFF
+set_global_assignment -name OPTIMIZE_MULTI_CORNER_TIMING OFF
+set_global_assignment -name FITTER_EFFORT "STANDARD FIT"
